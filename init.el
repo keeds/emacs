@@ -39,19 +39,6 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-;; (require 'package)
-
-;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")))
-;; (add-to-list 'package-archives
-;;              '("melpa" . "https://melpa.org/packages/") t)
-
-;; (package-initialize)
-
-;; (unless (package-installed-p 'use-package)
-;;   (package-refresh-contents)
-;;   (package-install 'use-package))
-
-
 (straight-use-package 'use-package)
 
 (use-package helm
@@ -72,7 +59,7 @@
 
 (use-package magit
   :straight t
-  ;; :ensure t
+  :ensure t
   :init
   (bind-key "C-c m g" 'magit-status)
   (bind-key "C-c m b" 'magit-blame)
@@ -89,7 +76,6 @@
   :ensure t
   :init
   (add-hook 'after-init-hook 'company-statistics-mode))
-
 
 (use-package paredit
   :straight t
