@@ -148,12 +148,17 @@
   :config
   (add-hook 'clojure-mode-hook #'my-clj-mode-hook))
 
+(use-package golden-ratio
+  :straight t
+  :ensure t
+  :config
+  (golden-ratio-mode 1))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; unset stupid suspend keystokes
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; font sizing
