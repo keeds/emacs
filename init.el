@@ -44,7 +44,7 @@
 (use-package helm
   :straight t
   :ensure t
-  :init
+  :config
   (bind-key "C-x b" 'helm-buffers-list)
   (bind-key "C-x C-b" 'helm-buffers-list)
   ;; (bind-key "M-x" 'helm-M-x)
@@ -53,7 +53,7 @@
 (use-package projectile
   :straight t
   :ensure t
-  :init
+  :config
   (bind-key "C-c p f" 'projectile-find-file)
   (bind-key "C-c p k" 'projectile-kill-buffers))
 
@@ -65,16 +65,22 @@
   (bind-key "C-c m b" 'magit-blame)
   (bind-key "C-c m q" 'magit-blame-quit))
 
+;; (use-package git-gutter
+;;   :straight t
+;;   :ensure t
+;;   :init
+;;   (global-git-gutter-mode 1))
+
 (use-package company
   :straight t
   :ensure t
-  :init
+  :config
   (global-company-mode))
 
 (use-package company-statistics
   :straight t
   :ensure t
-  :init
+  :config
   (add-hook 'after-init-hook 'company-statistics-mode))
 
 (use-package paredit
@@ -86,8 +92,7 @@
 (use-package undo-tree
   :straight t
   :ensure t
-  :init
-  (bind-key "M-_" 'undo-tree-visualize))
+  :config (global-undo-tree-mode))
 
 (use-package rainbow-delimiters
   :straight t
