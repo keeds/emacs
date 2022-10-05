@@ -154,6 +154,12 @@
   :config
   (golden-ratio-mode 1))
 
+(use-package solarized-theme
+  :straight t
+  :ensure t
+  :config
+  (load-theme 'solarized-light t))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; unset stupid suspend keystokes
